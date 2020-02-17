@@ -1,0 +1,44 @@
+//************************************************
+//Levi McCann
+//02/17/2020
+//Area Of Rectangles (4-4)
+//Hendrickson CIS 61
+//************************************************
+
+
+#include <string>
+#include <iostream>
+using namespace std;
+
+
+int main()
+ {
+//input variables
+  double firstRectWidth, firstRectLength;
+  double secondRectWidth, secondRectLength;
+  cout <<"Please enter the width of the 1st rectangle: " <<endl;
+  //get user input
+  cin >> firstRectWidth ;
+  cout <<"Please enter the first rectangle length: " <<endl;
+  //get user input
+  cin >> firstRectLength ;
+
+  cout <<"Please enter the second rectangle width: " <<endl;
+  //get user input
+  cin >> secondRectWidth ; 
+  cout <<"Please enter the second rectangle length: " <<endl;
+  //get user input
+  cin >> secondRectLength ;
+  //first rectangle area is greater
+  if ((firstRectWidth * firstRectLength) > (secondRectWidth * secondRectLength))
+      cout <<"Area of first rectangle is greater than the area of the second rectangle. " <<endl;
+  //second rectangle area is larger    
+  else if ((firstRectWidth * firstRectLength) < (secondRectWidth * secondRectLength))
+      cout <<"Area of second rectangle is greater than the area of the first rectangle. " <<endl;
+    //Print they are the same siz
+  else 
+    cout <<"The rectangles are the same size: " <<endl;
+
+return 0;
+
+}
