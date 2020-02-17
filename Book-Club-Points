@@ -1,0 +1,43 @@
+//**********************************************
+//.cpp
+//Levi McCann
+//Book Club Points (4-5)
+//02/17/2020
+//Hendrickson CIS 61
+//**********************************************
+
+
+#include <string>
+#include <iostream>
+using namespace std;
+
+int main() {
+  //decalre variable
+  int booksPurchased ;
+  //get books purchaed this month
+  cout <<"How many books did you purchase this month? " <<endl;
+  cin >> booksPurchased;
+  //format line break
+  cout <<endl;
+  //decision statement of how many books books
+  // this whole statement could be made with a //switch statement
+  if (booksPurchased == 0)
+      cout<<"You have 0 points earned. " <<endl;
+  else if (booksPurchased == 1)
+      cout<<"You earned 5 points! Keep it Up. " <<endl;
+  else if (booksPurchased == 2)
+      cout<<"You earned 15 points! Nicely done. " <<endl;
+  else if (booksPurchased == 3)
+      cout<<"You earned 30 points! Good Job! " <<endl;
+
+  else if (booksPurchased >= 4)
+      cout <<"You earned 50 points! Way to go! " <<endl;
+
+  else
+  { 
+    cout <<"Oops. The number 0 or greater must be entered. " <<endl;
+    cout <<"Please re-run the program and try again. " <<endl;
+
+  }
+return 0;
+}
