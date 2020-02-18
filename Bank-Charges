@@ -1,0 +1,83 @@
+
+//*********************************************
+//.cpp 
+//Levi McCann
+//02/18/2020
+//CIS 62 Hendrickson
+//Bank Charges (4-10)
+//*********************************************
+
+
+
+#include <iomanip>
+#include <string>
+
+#include <iostream>
+using namespace std;
+
+int main()
+ {
+  //Initialize constants and variables needed for program
+   const double EX_MONTHLY_CHARGE = 15,
+                TEN_CENTS = .10,
+                EIGHT_CENTS = .08,
+                SIX_CENTS = .06,
+                FOUR_CENTS = .04;
+    double beginning_bal,
+           total_monthly_charge = 10;
+    int number_of_checks;
+    //Ask user for input
+    cout <<"\nWhat is the beginning balance? " <<endl;
+    cin >> beginning_bal ;
+    //format line input
+    cout <<endl;
+    if (beginning_bal < 0)
+        cout <<"URGENT! Yourt account is overdrawn. " <<endl;
+
+    if (beginning_bal < 400)
+        total_monthly_charge += EX_MONTHLY_CHARGE;
+
+    cout <<"\nHow many checks were written?  " <<endl;
+    //input number of checks
+    cin >> number_of_checks;
+    //format line
+    cout <<endl;
+    if (number_of_checks <0) {
+        cout <<"Oops! The number of checks \n"
+        <<"written must be 0 or more." <<endl;
+        cout <<"Please re-run and try again."<<endl;
+    }
+    else 
+    {
+        cout <<setprecision(2) <<fixed ;
+        //nest if statement
+        if (number_of_checks >= 0 && number_of_checks < 20 )
+        {
+          total_monthly_charge += 
+          (number_of_checks * TEN_CENTS);
+
+        }
+        else if (number_of_checks >= 20 && number_of_checks <= 39 )
+        {
+            total_monthly_charge +=
+            (number_of_checks * EIGHT_CENTS);
+        }
+        else if (number_of_checks >= 40 && number_of_checks <= 59 )
+        {
+            total_monthly_charge +=
+            (number_of_checks * SIX_CENTS);  
+        }
+        else if (number_of_checks >= 60 )
+        {
+            total_monthly_charge +=
+            (number_of_checks * FOUR_CENTS);
+        }
+        
+          cout <<"Bank service fees for the \n"
+          <<"month are: $";
+          cout <<total_monthly_charge <<endl;
+        
+
+    }
+ return 0;
+}
