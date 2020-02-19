@@ -1,0 +1,78 @@
+//*************************************
+//.cpp
+//Levi McCann
+//Software Sales (4-9)
+//02/18/2020
+//CIS 61 Hendrickson
+//**************************************
+
+
+#include <iomanip>
+#include <iostream>
+using namespace std;
+
+
+
+int main()
+ {
+ //declare constants and variables
+ const double PACKAGE_PRICE = 199;
+
+
+ int units_sold, 
+     amt_without_discount;
+
+//Ask the user for input of units units_sold
+  cout <<"Please enter the number of units\n "
+  <<" sold: " <<endl;
+  //get units
+  cin >> units_sold;
+  //format line break
+  cout <<endl;
+  //Total amt before amt_without_discount
+  amt_without_discount = units_sold * PACKAGE_PRICE;
+
+  //set precision
+  cout <<setprecision(2) <<fixed ;
+
+  //if then, esle it else statement
+  if (units_sold >=0 && units_sold <= 9)
+  {
+    cout <<"Total cost of " <<units_sold <<" units is: $ "
+    <<amt_without_discount <<endl;
+
+  }
+  else if (units_sold >=10 && units_sold <= 19)
+  {
+    cout <<"Total cost of " <<units_sold <<" units \n"
+    <<"is: $ "
+    <<(amt_without_discount - (amt_without_discount * .20)) <<endl; //20% discount
+
+    cout <<endl;
+
+  }
+  else if ((units_sold >=20 && units_sold <= 49))
+  {
+    cout<<"Total cost of "<<units_sold<<" units \n"
+    <<" is: $" 
+    <<(amt_without_discount - (amt_without_discount * .30)) <<endl; //30% discount
+  }
+  else if  ((units_sold >=50 && units_sold <= 99))
+  {
+    cout<<"Total cost of "<<units_sold<<" units \n"
+    <<" is: $" 
+    <<(amt_without_discount - (amt_without_discount * .40)) <<endl; // 40% discount 
+
+  }
+  else if  ((units_sold >=100))
+  {
+    cout<<"Total cost of "<<units_sold<<" units \n"
+    <<" is: $" 
+    <<(amt_without_discount - (amt_without_discount * .50)) <<endl; //50% discount
+  }
+  else
+    cout <<"Oops! Please re-run the program again."
+    <<"Choose a number greater than 0."
+    <<endl;
+ return 0;
+}
