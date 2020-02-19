@@ -1,0 +1,37 @@
+//*********************************************
+//.cpp
+//Levi McCann
+//Minimum Maximum Conditional Operator (4-1)
+//02/18/2020
+//Hendrickson CIS 61 C++
+//*********************************************
+
+#include <string> //not needed in prog
+#include <iomanip> //not needed in prog
+#include <iostream>
+using namespace std;
+
+int main()
+
+ {
+   //initialize variables
+   int num1, num2;
+   cout <<"Please enter the first number: " <<endl;
+   cin>> num1;
+   //format data entry
+   cout <<endl;
+   //get second number
+   cout <<"Please enter the second number: " <<endl;
+   //get input
+   cin >> num2 ;
+   //format line break
+   cout <<endl;
+    //Using the ternary operator for statement
+    num1 >= num2 ? cout <<"Your number, "<<num1 <<" is\n"
+    <<" larger than " <<num2 <<" . " : cout <<"Your\n"
+    <<" number, " <<num2 <<" is larger than "
+    <<num1 <<" . " <<endl; 
+
+
+ return 0;
+}
