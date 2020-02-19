@@ -1,0 +1,66 @@
+//********************************************
+//.cpp
+//Levi McCann
+//Roman Numeral Coverter
+//02/18/2020
+//CIS 61 Hendrickson
+//********************************************
+
+
+
+
+#include <string>
+#include <iomanip>
+#include <iostream>
+using namespace std;
+
+
+int main()
+ {
+//initialize constants and variables
+  int number;
+  //Get input from user
+  cout <<"Please enter an number from 1 to 10 and I \n"
+  <<"will convert it to Roman Numerals: " <<endl;
+  cin >> number ;
+  cout <<endl;
+
+  switch (number)
+  {
+    case 1:
+      cout <<"I ";
+      break;
+    case 2:
+      cout <<"II ";
+      break;
+    case 3:
+      cout <<"III ";
+      break;
+    case 4:
+      cout <<"IV ";
+    case 5:
+      cout <<"V ";
+      break;
+    case 6:
+      cout <<"VI ";
+      break;
+    case 7:
+      cout <<"VII ";
+      break;
+    case 8: 
+      cout <<"VIII ";
+      break;
+    case 9:
+      cout <<"IX ";
+      break;
+    case 10:
+      cout <<"X ";
+      break;
+    default:
+      cout <<"You did not enter a valid number: " <<endl;
+
+
+
+  }
+  return 0;
+}
